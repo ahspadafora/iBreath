@@ -11,11 +11,14 @@ import UIKit
 class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet var circleView: CircleView!
-
+    
+    var breathInDuration: TimeInterval = UserDefaultsManager.breathInVal
+    var breathOutDuration: TimeInterval = UserDefaultsManager.breathOutVal
+    var holdDuration: TimeInterval = UserDefaultsManager.holdVal
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Tap within the circle to begin the breathing excercise"
+        self.title = "Tap the circle to begin the excercise"
         self.view.backgroundColor = Colors.lightGray
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(startPressed))
         tapGesture.delegate = self
@@ -23,25 +26,30 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @objc func startPressed(){
-        UIView.animate(withDuration: 4.0, delay: 0, options: .allowAnimatedContent, animations: {
-            self.title = "Breath In"
-            self.circleView.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        UIView.animate(withDuration: self.breathInDuration, delay: 0, options: .allowAnimatedContent, animations: {
+            self.breathIn()
         }) { (completed) in
-            guard completed else { return }
-            if completed == true {
-                self.title = "Hold"
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 4.0, execute: {
-                    UIView.animate(withDuration: 8.0, delay: 0.0, options: .allowAnimatedContent, animations: {
-                        self.title = "Breath Out"
-                        self.circleView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-                    }){(completed) in
-                        self.title = ""
-                    }
-                })
-            }
+            guard completed == true else { return }
+            self.title = "Hold"
+            self.breathOut()
+            
         }
     }
-
+    
+    func breathIn(){
+        self.title = "Breath In Through Your Nose"
+        self.circleView.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+    }
+    func breathOut(){
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + self.holdDuration, execute: {
+            UIView.animate(withDuration: self.breathOutDuration, delay: 0.0, options: .allowAnimatedContent, animations: {
+                self.title = "Breath Out Through Your Mouth"
+                self.circleView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            }){(completed) in
+                self.title = "Tap the circle to begin the excercise"
+            }
+        })
+    }
     
     
 }

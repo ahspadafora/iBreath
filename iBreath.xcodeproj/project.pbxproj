@@ -16,6 +16,11 @@
 		04577F6B1FA03E0600AB33AB /* iBreathUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04577F6A1FA03E0600AB33AB /* iBreathUITests.swift */; };
 		04577F791FA0453200AB33AB /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04577F781FA0453200AB33AB /* CircleView.swift */; };
 		04577F7B1FA1B51C00AB33AB /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04577F7A1FA1B51C00AB33AB /* colors.swift */; };
+		04E0CB5D1FABCDC600A24B0E /* segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0CB5C1FABCDC600A24B0E /* segues.swift */; };
+		04E0CB5F1FABCE0B00A24B0E /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0CB5E1FABCE0B00A24B0E /* SettingsTableViewController.swift */; };
+		04E0CB611FABE47100A24B0E /* ChangeSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0CB601FABE47100A24B0E /* ChangeSettingViewController.swift */; };
+		04E0CB631FABE77C00A24B0E /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0CB621FABE77C00A24B0E /* UserDefaultsManager.swift */; };
+		04E0CB651FABE9B000A24B0E /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0CB641FABE9B000A24B0E /* Setting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		04577F6C1FA03E0600AB33AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04577F781FA0453200AB33AB /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		04577F7A1FA1B51C00AB33AB /* colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
+		04E0CB5C1FABCDC600A24B0E /* segues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = segues.swift; sourceTree = "<group>"; };
+		04E0CB5E1FABCE0B00A24B0E /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		04E0CB601FABE47100A24B0E /* ChangeSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSettingViewController.swift; sourceTree = "<group>"; };
+		04E0CB621FABE77C00A24B0E /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		04E0CB641FABE9B000A24B0E /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +113,12 @@
 			children = (
 				04577F4A1FA03E0400AB33AB /* AppDelegate.swift */,
 				04577F4C1FA03E0400AB33AB /* ViewController.swift */,
+				04E0CB5E1FABCE0B00A24B0E /* SettingsTableViewController.swift */,
+				04E0CB621FABE77C00A24B0E /* UserDefaultsManager.swift */,
+				04E0CB641FABE9B000A24B0E /* Setting.swift */,
 				04577F4E1FA03E0400AB33AB /* Main.storyboard */,
+				04E0CB601FABE47100A24B0E /* ChangeSettingViewController.swift */,
+				04E0CB5C1FABCDC600A24B0E /* segues.swift */,
 				04577F781FA0453200AB33AB /* CircleView.swift */,
 				04577F7A1FA1B51C00AB33AB /* colors.swift */,
 				04577F511FA03E0400AB33AB /* Assets.xcassets */,
@@ -267,8 +282,13 @@
 			files = (
 				04577F791FA0453200AB33AB /* CircleView.swift in Sources */,
 				04577F7B1FA1B51C00AB33AB /* colors.swift in Sources */,
+				04E0CB5F1FABCE0B00A24B0E /* SettingsTableViewController.swift in Sources */,
 				04577F4D1FA03E0400AB33AB /* ViewController.swift in Sources */,
+				04E0CB5D1FABCDC600A24B0E /* segues.swift in Sources */,
+				04E0CB611FABE47100A24B0E /* ChangeSettingViewController.swift in Sources */,
+				04E0CB631FABE77C00A24B0E /* UserDefaultsManager.swift in Sources */,
 				04577F4B1FA03E0400AB33AB /* AppDelegate.swift in Sources */,
+				04E0CB651FABE9B000A24B0E /* Setting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
